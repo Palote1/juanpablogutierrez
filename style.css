@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Lato", serif;
+}
+
+.container-grid {
+    display: grid;
+    grid gap: 20px;
+    min-height: 100vh;
+    grid-template-rows: auto auto 1fr auto;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "header"
+        "nav"
+        "section"
+        "footer";
+}
+
+@media (min-width 360px) {
+    container-grid {
+        display: grid;
+        grid gap: 20px;
+        min-height: 100vh;
+        grid-template-rows: auto auto 1fr auto;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "header header"
+            "nav"
+            "section"
+            "footer footer";
+
+
+    }
+
+    @media (min-width 768px) {
+        container-grid {
+            display: grid;
+            grid gap: 20px;
+            min-height: 100vh;
+            grid-template-rows: auto auto 1fr auto;
+            grid-template-columns: 1fr;
+            grid-template-areas:
+                "header header header"
+                "nav"
+                "section"
+                "footer footer footer";
+
+
+        }
+
+
+        .header {
+            grid-area: header;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: #ff07c9;
+            gap: 2rem;
+        }
+
+        header nav ul {
+            display: flexbox;
+        }
+
+        .nav__list {
+            grid-area: nav;
+        }
+
+        .section {
+            background-color: white;
+            grid-area: section;
+        }
+
+        .home__fondo {
+            display: flex;
+            background-color: #000000;
+            border: 1px solid black;
+            padding-block-end: 1rem;
+            padding: 2rem;
+        }
+
+        .form__contacto {
+            justify-content: center;
+            align-items: center;
+        }
+
+        .spanquienes__somos {
+            padding-top: 5rem;
+            font-size: 20px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .charo {
+            font-size: 100px;
+            gap: 5rem;
+        }
+
+        .gallery__productos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+            grid-gap: 20px;
+        }
+
+        .article__productos {
+            display: flex;
+            flex-direction: column;
+            border: 1px solid black;
+            border-radius: 1rem;
+            padding: 2rem;
+        }
+
+        .sectiontalles__1 {
+            background-color: hsl(56, 100%, 53%);
+        }
+
+        .footer {
+            background-color: darkgrey;
+            grid-area: footer;
+        }
